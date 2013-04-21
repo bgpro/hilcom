@@ -1,0 +1,649 @@
+/*
+
+    AnythingSlider v1.4
+
+
+
+    By Chris Coyier: http://css-tricks.com
+
+    with major improvements by Doug Neiner: http://pixelgraphics.us/
+
+    based on work by Remy Sharp: http://jqueryfordesigners.com/
+
+*/
+
+
+
+/******* SET DEFAULT DIMENSIONS HERE ********/
+
+div.anythingSlider {
+
+	width: 920px;
+
+	height: 410px;
+
+	color: #ffffff;
+
+}
+
+
+
+/****** SET COLORS HERE *******/
+
+/* Default State */
+
+div.anythingSlider .thumbNav a.cur, div.anythingSlider .thumbNav a {
+
+	
+
+}
+
+div.anythingSlider .anythingWindow {
+
+	
+
+}
+
+/* Active State */
+
+div.anythingSlider.activeSlider .thumbNav a.cur, div.anythingSlider.activeSlider .thumbNav a {
+
+	
+
+}
+
+div.anythingSlider.activeSlider .anythingWindow {
+
+	
+
+}
+
+
+
+/**** DO NOT CHANGE BELOW THIS LINE ****/
+
+/* anythingSlider viewport window */
+
+div.anythingSlider .anythingWindow {
+
+	overflow: hidden;
+
+	position: relative;
+
+	width: 100%;
+
+	height: 100%;
+
+}
+
+/* wrapper: 45px right & left padding for the arrows, 28px @ bottom for naviagation */
+
+div.anythingSlider {
+
+	position: relative;
+
+
+
+}
+
+/* anythingSlider base UL */
+
+ul.anythingBase {
+
+	background: transparent;
+
+	list-style: none;
+
+	position: absolute;
+
+	top: 0; left: 0;
+
+	margin: 0;
+
+}
+
+ul.anythingBase li.panel {
+
+	background: transparent;
+
+	display: block;
+
+	float: left;
+
+	padding: 0;
+
+	margin: 0;
+
+}
+
+
+
+/* Navigation Arrows */
+
+div.anythingSlider .arrow {
+
+	top: 50%;
+
+	position: absolute;
+
+	display: block;
+
+}
+
+div.anythingSlider .arrow a {
+
+	display: block;
+
+	height: 120px;
+
+	margin-top: -60px;
+
+	width: 45px;
+
+	text-align: center;
+
+	outline: 0;
+
+	background: url(../images/contentslider/arrows.png) no-repeat;
+
+	text-indent: -9999px;
+
+}
+
+div.anythingSlider .forward { right: 0; }
+
+div.anythingSlider .back { left: 0; }
+
+div.anythingSlider .forward a { background-position: 0 -40px; }
+
+div.anythingSlider .back a { background-position: -88px -40px; }
+
+div.anythingSlider .forward a:hover, div.anythingSlider .forward a.hover { background-position: 0 -240px; }
+
+div.anythingSlider .back a:hover, div.anythingSlider .back a.hover { background-position: -88px -240px; }
+
+
+
+/* Navigation Links */
+
+div.anythingSlider .thumbNav { }
+
+div.anythingSlider .thumbNav li { display: inline; }
+
+div.anythingSlider .thumbNav a {
+
+
+
+}
+
+div.anythingSlider .thumbNav a:hover { }
+
+
+
+/* slider autoplay right-to-left, reverse order of nav links to look better */
+
+div.anythingSlider.rtl .thumbNav a { float: right; } /* reverse order of nav links */
+
+div.anythingSlider.rtl .thumbNav { float: left; }    /* move nav link group to left */
+
+div.anythingSlider.rtl .start-stop { display: none; }  /* move start/stop button - in case you want to switch sides */
+
+
+
+/* Autoplay Start/Stop button */
+
+div.anythingSlider .start-stop {
+
+	display: none;
+
+}
+
+div.anythingSlider .start-stop.playing {display: none;}
+
+div.anythingSlider .start-stop:hover, div.anythingSlider .start-stop.hover { background-image: none; color: #ff0 }
+
+
+
+
+
+.clear{
+
+	clear: both;
+
+}
+
+
+
+
+
+
+
+
+
+/* -- CUSTOM --  */
+
+.slider-text{
+
+	color: #fff;
+
+	font-family: 'Droid Sans', arial, serif;
+	
+	font-size:2.8em;
+
+	float: left;
+	
+	position:absolute;
+	
+	padding:8px 8px 8px 8px;
+
+	margin:45px 0 0 25px;
+	
+	background:rgba(0,0,0,0.9);
+	
+}
+
+.slider-text-2{
+
+	color: #fff;
+
+	font-family: 'Droid Sans', arial, serif;
+	
+	font-size:2.8em;
+
+	float: left;
+	
+	position:absolute;
+	
+	padding:8px 8px 8px 8px;
+
+	margin:95px 0 0 25px;
+	
+	background:rgba(0,0,0,0.9);
+	
+}
+
+.slider-image{
+
+	
+
+	width: 920px;
+
+
+}
+
+.slider-text p{
+
+	margin: 0;
+
+	font-size: 2.4em;
+
+	line-height: 1.6em;
+
+	
+
+
+
+}
+
+.slider-text a.readmore{
+
+	color: #f37b20;
+
+	text-decoration: none;
+
+	font-size: 2em;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.arrow-bg{
+
+	position: absolute;
+
+	right: -11px;
+
+	top: 61px;
+
+	
+
+}
+
+
+
+#basic-modal-content {display:none;}
+
+#simplemodal-overlay {background-color:#000;}
+
+#simplemodal-container a.modalCloseImg {
+
+	background:url(../images/close-service-box.jpg) no-repeat; 
+
+	width:25px; 
+
+	height:29px; 
+
+	display:inline; 
+
+	z-index:3200; 
+
+	position:absolute; 
+
+	top:9px; 
+
+	right:-15px; 
+
+	cursor:pointer;
+
+}
+
+
+
+.advanced-content-inline-footer .standard-advertise-chat-wrapper{
+
+	height:143px;
+
+	margin-bottom: 20px;
+
+	padding: 12px;
+
+}
+
+
+
+
+
+.background-arrow{
+
+	width: 225px;
+
+}
+
+.getquote{
+
+	width: 535px!important;
+
+	height: 410px!important;
+
+}
+
+.toolbar-part{
+
+	margin: 0 0 10px 0;
+
+	width: 60px;
+
+	text-align: center;
+
+}
+
+.toolbar-part .hidden{
+
+	display: none;
+
+	position: relative;
+
+}
+
+.toolbar-part a{
+
+	text-decoration: none;
+
+	color: #ffffff;
+
+	text-align: center;	
+
+	cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.quoteform{
+
+	color: #757575;
+
+	font-family: 'Droid Sans', arial, serif;
+
+}
+
+.quoteform h3{
+
+	font-size: 1em;
+
+	margin: 0 0 3px 0;
+
+}
+
+.quoteform ul{
+
+	list-style-type: none;
+
+	margin: 0;
+
+	padding: 0;
+
+}
+
+.quoteform li{
+
+	display: block;
+
+	float: left;
+
+	width: 170px;
+
+}
+
+.quoteform .block {
+
+	font-size: 1.35em;
+
+}
+
+.quoteform label{
+
+	display: inline-block;
+
+	margin: -3px 25px 0 2px;
+
+}
+
+.quoteform input[type="radio"]{
+
+	margin-top: 2px;
+
+	display: inline-block;
+
+}
+
+.quoteform input[type="text"]{
+
+	background: #fafafa;
+
+	color: #757575;
+
+	font-family: 'Droid Sans', arial, serif;
+
+	padding: 4px; 
+
+	border: 1px solid #cccccc; 
+
+	display: inline-block;
+
+	font-size: 0.9em;
+
+}
+
+.quoteform .block{
+
+	margin: 0 0 20px 0;
+
+	clear: both;
+
+}
+
+.quoteform .left{
+
+	float: left;
+
+	width: 215px;
+
+}
+
+.quoteform .right{
+
+	float: left;
+
+	width: 240px;
+
+}
+
+.quoteform .contact-left{
+
+	width: 200px;
+
+	margin: 0 0 3px 0;
+
+}
+
+.quoteform textarea{
+
+	color: #757575;
+
+	font-family: 'Droid Sans', arial, serif;
+
+	background: #fafafa;
+
+	padding: 2px; 
+
+	font-size: 0.9em;
+
+	border: 1px solid #cccccc; 
+
+	text-align: left;
+
+	float: none;	
+
+	height: 73px;
+
+	width: 240px;
+
+}
+
+
+
+.service-wrapper{
+
+	margin-top: 50px;
+
+}
+
+
+
+
+
+.reference-full .anythingSlider{
+
+	background: none;
+
+	padding: 0;
+
+}
+
+.reference-full .thumbNav{
+
+	text-align: center;
+
+	margin: 8px auto 20px auto;
+
+	width: 60px;
+
+}
+
+.reference-full .thumbNav li a{
+
+	height: 11px;
+
+	width: 12px;
+
+	display: block;
+
+	text-decoration: none;
+
+	float: left;
+
+	margin: 0 4px 0 0;
+
+	background: url(../images/slide_nav_ref.jpg);
+
+}
+
+.reference-full .thumbNav li a.cur{
+
+	background: url(../images/slide_nav_ref_active.jpg);
+
+}
+
+.reference-full .anythingSlider .anythingWindow{
+
+	border: 1px solid #b3b3b3;
+
+}
+
+
+
+
+
+
+
+
+
+
+
