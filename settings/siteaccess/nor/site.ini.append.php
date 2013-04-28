@@ -24,9 +24,12 @@ SessionNamePerSiteAccess=disabled
 
 [SiteSettings]
 SiteName=Hvittingfoss Idrettslag Fotballgruppa
-SiteURL=hilfotball.web1.dedicated99.no.webdeal.no/nor
+SiteURL=hvittingfoss-fotball.org
 LoginPage=embedded
-AdditionalLoginFormActionURL=http://hilfotball.web1.dedicated99.no.webdeal.no/siteadmin/user/login
+MetaDataArray[author]=Hvittingfoss Idrettslag Fotballgruppa
+MetaDataArray[copyright]=Hvittingfoss Idrettslag Fotballgruppa
+MetaDataArray[description]=Hvittingfoss Idrettslag Fotballgruppa
+MetaDataArray[keywords]=Hvittingfoss, Idrettslag, Fotballgruppa, fotball
 IndexPage=/content/view/full/60
 DefaultAccess=nor
 
