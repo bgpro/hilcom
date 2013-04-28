@@ -407,6 +407,18 @@ div#footer div.logo{
 
 }
 
+div#footer div.content{
+
+	padding:80px 20px 20px 30px;
+	
+	width:750px;
+	
+	float:left;
+	
+	font-size:14px;
+
+}
+
 /* KAMPREFERAT */
 
 /* Linjevisning */
