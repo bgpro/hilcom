@@ -887,3 +887,18 @@ input.submitblack{
 	background:#000;
 	color:#fff;
 }
+
+.warning{
+
+	margin:10px 0;
+	padding:10px;
+	background:#ff0000;
+	color:#fff;
+	font-size:1.2em;
+	display:none;
+
+}
+
+ul{
+	/*margin-left:20px; */
+}

@@ -81,7 +81,7 @@ Filters[]=geometry/scalewidth=75
 [billboard]
 Reference=
 Filters[]
-Filters[]=geometry/scalewidth=960
+Filters[]=geometry/scalewidth=764
 
 [productthumbnail]
 Reference=
