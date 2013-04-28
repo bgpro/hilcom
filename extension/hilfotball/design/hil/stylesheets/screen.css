@@ -400,6 +400,10 @@ div#footer{
 div#footer div.logo{
 
 	padding:25px 20px 20px 30px;
+	
+	width:100px;
+	
+	float:left;
 
 }
 
