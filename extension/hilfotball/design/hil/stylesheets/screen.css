@@ -21,7 +21,7 @@ body{
 
 	font-size:62.5%;
 
-	background:url(../images/bg.png) #FFCC01 top center fixed no-repeat;
+	background:url(../images/bg.png) #000 top center fixed no-repeat;
 	
 	background-position: fixed;
 	
@@ -389,7 +389,7 @@ div#footer{
 	
 	height:125px;
 	
-	margin:25px auto 0 auto;
+	margin:5px auto 0 auto;
 	
 	background:#000;
 	
