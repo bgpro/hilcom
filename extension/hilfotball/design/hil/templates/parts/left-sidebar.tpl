@@ -52,7 +52,7 @@ $(document).ready(function(){
 	{if eq($sm.class_identifier,'link')}
 		<li><a target="_blank" href={$sm.data_map.location.content}>{$sm.name|wash()}</a></li>
 	{else}
-		<li><a href={$sm.url_alias|ezurl}>{$sm.name|wash()}</a></li>
+		<li {if eq($sm.node_id,$node.node_id)}class="active"{/if}><a href={$sm.url_alias|ezurl}>{$sm.name|wash()}</a></li>
 	{/if}
 {/foreach}
 
