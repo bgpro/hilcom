@@ -920,7 +920,22 @@ ul{
 }
 
 /* eZp styles */
-.renderedtable tr th{
-	text-align:left;
-	background:#dadada;
+table.renderedtable tr th {
+    background: none repeat scroll 0 0 #EDEDED;
+    border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
+    padding: 5px 15px;
+}
+
+table.renderedtable tr {
+    border: 1px solid #DDDDDD;
+}
+
+table.renderedtable tr td {
+   border-left: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    line-height: 1.3em;
+    padding: 5px 10px;
 }
