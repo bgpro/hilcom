@@ -918,3 +918,9 @@ input.submitblack{
 ul{
 	/*margin-left:20px; */
 }
+
+/* eZp styles */
+.renderedtable tr th{
+	text-align:left;
+	background:#dadada;
+}
