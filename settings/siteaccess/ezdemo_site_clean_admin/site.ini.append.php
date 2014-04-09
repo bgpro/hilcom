@@ -2,7 +2,7 @@
 
 [DatabaseSettings]
 DatabaseImplementation=ezmysqli
-Server=byt-mysql21.osl.basefarm.net
+Server=byt-mysql.osl.basefarm.net
 Port=
 User=hilfotball
 Password=KFX8A2CdFR
